@@ -34,7 +34,7 @@ const RegisterForm: React.FC = () => {
   
     try {
       await axios.post(
-        "https://literateia.onrender.com/auth/register",
+        "http://localhost:8080/auth/register",
         formData,
         {
           headers: { "Content-Type": "application/json" },

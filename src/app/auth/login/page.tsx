@@ -33,7 +33,7 @@ const LoginPage: React.FC = () => {
 
     try {
       const response = await axios.post(
-        "https://literateia.onrender.com/auth/login", 
+        "http://localhost:8080/auth/login", 
         { username, password },
         {
           headers: { "Content-Type": "application/json" },
