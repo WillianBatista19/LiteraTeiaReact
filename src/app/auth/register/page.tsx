@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const RegisterForm: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: "",
+    username: "",
     email: "",
     password: "",
   });
@@ -27,7 +27,7 @@ const RegisterForm: React.FC = () => {
     setErrorMessage(null);
     setSuccessMessage(null);
   
-    if (!formData.name || !formData.email || !formData.password) {
+    if (!formData.username || !formData.email || !formData.password) {
       setErrorMessage("Todos os campos são obrigatórios.");
       return;
     }
@@ -92,9 +92,9 @@ const RegisterForm: React.FC = () => {
             </div>
             <input
               type="text"
-              name="name"
+              name="username"
               placeholder="Nome"
-              value={formData.name}
+              value={formData.username}
               onChange={handleChange}
               required
               className="w-full py-3 pl-10 pr-4 bg-white/10 text-white placeholder-white/50 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/30"
